@@ -366,3 +366,11 @@ def setup_pyramid(comp, config):
     config.add_route(
         'resource.export', '/api/resource/{id}/export',
         factory=resource_factory)
+
+    config.add_route(
+        'resource.inspect', '/api/resource/{id}/inspect',
+        factory=resource_factory)
+
+    config.add_route(
+        'resource.inspect.table', '/api/resource/{id}/inspect/{table_name}/',
+        factory=resource_factory)
